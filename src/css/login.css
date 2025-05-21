@@ -23,4 +23,21 @@ header a{
 
 body{
     background-color: #F2EEEB;
+    
+}
+
+.login{
+    background-color: #BFB9AE;
+    background-size: cover;
+    width: 400px;
+    margin: 0;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+}
+
+.login button{
+    width: 100px;
 }
