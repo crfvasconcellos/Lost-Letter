@@ -29,23 +29,24 @@ Projeto desenvolvido por **Cláudio Vasconcellos** e **Otávio Augusto** durante
 ```bash
 lost-letter/
 │
-├── index.html               # Tela inicial
-├── pages/                   # Outras telas
-│   ├── login.html
-│   ├── cadastro.html
-│   ├── esqueceu-senha.html
-│   └── jogo.html
+├── src/
+│   ├── pages/               # Arquivos HTML do projeto
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   ├── cadastro.html
+│   │   ├── esqueceu-senha.html
+│   │   └── jogo.html
+│   │
+│   ├── css/                 # Estilos do projeto
+│   │   └── style.css
+│   │
+│   ├── js/                  # Scripts do projeto
+│   │   ├── main.js
+│   │   └── auth.js
+│   │
+│   └── assets/              # Logos, imagens e fontes
+│       ├── img/
+│       └── fonts/
 │
-├── css/
-│   └── style.css            # Estilos do projeto
-│
-├── js/
-│   ├── main.js              # Lógica do jogo
-│   └── auth.js              # Login/Cadastro
-│
-├── assets/
-│   ├── img/                 # Logos, ícones e imagens
-│   └── fonts/               # (opcional) Fontes utilizadas
-│
-└── README.md                # Você está aqui
+└── README.md
 
