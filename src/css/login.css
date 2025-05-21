@@ -102,7 +102,12 @@ body {
 }
 
 .ancoras{
-    font-size: 20px
+    font-size: 20px;
+}
+
+.bodygeral{
+    display: flex;
+    gap: 17px;
 }
 
 footer {
