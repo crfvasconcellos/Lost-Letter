@@ -1,6 +1,6 @@
 # 🎮 Lost Letter - Jogo da Forca
 
-Projeto desenvolvido por **Cláudio Vasconcellos** e **Otávio Augusto** durante a disciplina de **Desenvolvimento Web**, com o objetivo de aplicar conhecimentos de HTML, CSS e JavaScript em um projeto prático e interativo.
+Projeto desenvolvido por **[Cláudio Vasconcellos](https://github.com/crfvasconcellos)** e **[Otávio Augusto](https://github.com/otavio-asr)** durante a disciplina de **Desenvolvimento Web**, com o objetivo de aplicar conhecimentos de HTML, CSS e JavaScript em um projeto prático e interativo.
 
 ---
 
@@ -8,18 +8,18 @@ Projeto desenvolvido por **Cláudio Vasconcellos** e **Otávio Augusto** durante
 
 **Lost Letter** é um jogo da forca no qual o jogador deve adivinhar palavras ocultas antes que o boneco seja completamente enforcado. O sistema conta com:
 
-- Tela inicial
-- Sistema de login e cadastro
-- Recuperação de senha
-- Tela principal do jogo
+- Tela inicial  
+- Sistema de login e cadastro  
+- Recuperação de senha  
+- Tela principal do jogo  
 - Ranking de jogadores
 
 ---
 
 ## 🧱 Tecnologias Utilizadas
 
-- HTML5
-- CSS3
+- HTML5  
+- CSS3  
 - JavaScript (Vanilla JS)
 
 ---
@@ -44,9 +44,8 @@ lost-letter/
 │   │   ├── main.js
 │   │   └── auth.js
 │   │
-│   └── assets/              # Logos, imagens e fontes
+│   └── assets/              # Logos, imagens e fontes (opcional)
 │       ├── img/
 │       └── fonts/
 │
 └── README.md
-
