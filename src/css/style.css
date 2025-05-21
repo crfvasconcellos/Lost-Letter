@@ -43,3 +43,7 @@ body{
     display: inline-block;
     
 }
+
+.Jogar img{
+    border-radius: 80px;
+}
