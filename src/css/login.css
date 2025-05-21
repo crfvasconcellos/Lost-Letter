@@ -53,13 +53,13 @@ body {
 
 /* Bloco de login */
 .login {
+    border-radius: 60px;
     background-color: #BFB9AE;
     padding: 10px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-
     color: #000;
     font-size: 36px;
     background-size: cover;
@@ -101,6 +101,9 @@ body {
     cursor: pointer;
 }
 
+.ancoras{
+    font-size: 20px
+}
 
 footer {
     background-color: #BFB9AE;
