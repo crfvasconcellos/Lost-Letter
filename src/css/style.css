@@ -17,3 +17,29 @@ header{
 body{
     background-color: #F2EEEB;
 }
+
+.Jogar{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+
+    gap: 70px;
+
+}
+
+.Jogar a{
+    font-size: 60px;
+    color: white;
+    text-decoration: none;
+
+
+    border-radius: 30px;
+    background-color: #0FC570;
+    background-size: auto;
+    padding: 10px 90px; 
+    display: inline-block;
+    
+}
