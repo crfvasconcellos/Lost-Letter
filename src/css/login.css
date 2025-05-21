@@ -16,8 +16,9 @@ header{
     display: flex;
 }
 
-header img{
+header a{
     margin-left: 70px ;
+    display: flex;
 }
 
 body{
