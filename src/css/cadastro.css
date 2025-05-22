@@ -1,32 +1,121 @@
-*{
+/* Reset e padrões globais */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 html, body {
     height: 100%;
-}
-
-
-header{
-    background-color: #BFB9AE;
-    height: 80px;
     display: flex;
-}
-
-header a{
-    margin-left: 70px ;
-    display: flex;
-}
-
-body{
     background-color: #F2EEEB;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
 }
-.cadastro{
+
+/* Remoção dos estilos padrão de listas */
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cabeçalho */
+header {
     background-color: #BFB9AE;
-   margin: 0;
-   padding: 10px 25px;
-   
+    height: auto;
+    max-height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    max-height: 120px;
+    width: auto;
+    height: auto;
+}
+
+
+header a {
+    margin-left: 70px;
+    display: flex;
+}
+
+/* Corpo da página */
+body {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    align-items: center;
+    gap: 250px;
+}
+
+/* Bloco de login */
+.cadastro {
+    border-radius: 60px;
+    background-color: #BFB9AE;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    font-size: 36px;
+    background-size: cover;
+}
+
+/* Lista de dados (e-mail e senha) */
+.dados {
+    margin: 100px;
+    margin-right: 200px;
+}
+
+.dados li {
+    margin-bottom: 15px;
+}
+
+/* Campos de entrada */
+.cadastro input {
+    background-color: #F3EEE8;
+    width: 685px;
+    height: 89px;
+    border-radius: 13px;
+    border: none;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+/* Botão */
+.cadastro button {
+    width: 122px;
+    height: 56px;
+    margin-top: 15px;
+    margin-left: 85%;
+    
+    color: #FFF;
+    background-color: #F38B45;
+    border: none;
+    border-radius: 13px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.ancoras{
+    font-size: 20px;
+}
+
+.bodygeral{
+    display: flex;
+    gap: 17px;
+}
+
+footer {
+    background-color: #BFB9AE;
+    width: 100%;
+    height: 100px; /* altura fixa, ou use min-height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
