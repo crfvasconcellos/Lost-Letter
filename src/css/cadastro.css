@@ -5,20 +5,13 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    display: flex;
-    background-color: #F2EEEB;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-}
-
 /* Remoção dos estilos padrão de listas */
 ul, ol {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 
 /* Cabeçalho */
 header {
@@ -44,18 +37,17 @@ header a {
 
 /* Corpo da página */
 body {
+    background-color: #f3ece8;
+    height: 100%;
+    min-height: 100vh;
     display: flex;
-    flex:1;
     flex-direction: column;
-    align-items: center;
-    gap: 250px;
 }
-
 /* Bloco de login */
 .cadastro {
     border-radius: 60px;
     background-color: #BFB9AE;
-    padding: 10px 25px;
+    padding: 40px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,6 +55,10 @@ body {
     color: #000;
     font-size: 36px;
     background-size: cover;
+    min-width: 400px;     /* Largura mínima */
+    min-height: 400px;    /* Altura mínima */
+    box-shadow: 0 2px 16px #0002;
+    margin: 40px 0;
 }
 
 /* Lista de dados (e-mail e senha) */
@@ -105,17 +101,39 @@ body {
     font-size: 20px;
 }
 
-.bodygeral{
+.bodygeral {
+      display: flex;
+    flex-direction: column;   /* Empilha seta e login em coluna */
+    align-items: center;      /* Centraliza horizontalmente */
+    justify-content: center;  /* Centraliza verticalmente */
+
+}
+
+.alinhar-seta{
+    margin: 100px;
     display: flex;
-    gap: 17px;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+.seta-voltar img {   
+    -webkit-user-drag: none;   /* Chrome/Safari */
+    user-select: none;         /* Não permite seleção */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    width: 40px;
+    height: auto;
+    cursor: pointer;
 }
 
 footer {
+    /* Removido height: 100%; */
+    margin-top: auto;
     background-color: #BFB9AE;
     width: 100%;
-    height: 100px; /* altura fixa, ou use min-height */
+    padding: 70px 0; /* para dar altura visual, ao invés de height fixa */
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
