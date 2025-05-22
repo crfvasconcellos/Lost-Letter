@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #f3ece8;
+}
+
+
+body {
+    background-color: #f3ece8;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Rank{
+    margin: 100px;
+    height: auto;
+}
+
+header {
+    background-color: #476CFF;
+    height: auto;
+    max-height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    max-height: 120px;
+    width: auto;
+    height: auto;
+}
+
+
+header a {
+    margin-left: 70px;
+    display: flex;
+}
+
+
+.fotoperfil{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    
+}
+
+.fotoperfil img {
+    margin: 40px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #F7B239; /* Exemplo: borda azul de 6px */
+    box-shadow: 0px 12px 0px rgba(0, 0, 0, 0.133); /* Sombra suave */
+
+     /* Impede arrastar e copiar */
+    -webkit-user-drag: none;   /* Chrome/Safari */
+    user-select: none;         /* Não permite seleção */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.fotoperfil h2{
+    background-color: #F38B45;
+    border-radius: 13px;
+    padding: 10px;
+}
+
+
+.Rank{
+    background-color: #F38B45;
+    width: 400px;
+    /* min-height: 200px;  Remova ou comente esta linha */
+    border-radius: 16px;
+    box-shadow: 0 4px 16px #0002;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+footer {
+      margin-top: auto;
+    background-color: #476CFF;
+    width: 100%;
+    padding: 10px 0; /* para dar altura visual, ao invés de height fixa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
