@@ -9,6 +9,7 @@ btn.addEventListener("click", function(event) {
 
     console.table([nick,email,senha])
 })
+
 localStorage.setItem("carro", "bmw")
 console.log(localStorage.getItem("carro"))
 localStorage.removeItem("carro")
