@@ -9,3 +9,10 @@ btn.addEventListener("click", function(event) {
 
     console.log([nick,email,senha])
 })
+
+localStorage.setItem("carro", "bmw")
+console.log(localStorage.getItem("carro"))
+localStorage.removeItem("carro")
+
+let marcas = ['gibson', 'fender', 'ltd']
+localStorage.setItem("guitarras", marcas)
