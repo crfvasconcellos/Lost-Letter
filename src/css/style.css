@@ -38,7 +38,13 @@ body {
 }
 
 img{
-    background-color: #f3e700;
+    border: 4px solid #F38B45;
+    /* Impede arrastar e copiar */
+    -webkit-user-drag: none;   /* Chrome/Safari */
+    user-select: none;         /* Não permite seleção */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     
 }
 
