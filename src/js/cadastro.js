@@ -1,4 +1,4 @@
-const btn = document.querySelector('#avançar')
+const btn = document.querySelector('.avançar')
 
 btn.addEventListener("click", function(event) {
     event.preventDefault()
@@ -7,5 +7,5 @@ btn.addEventListener("click", function(event) {
     const email = document.querySelector('#email').value
     const senha = document.querySelector('#senha').value
 
-    console.log([nick,email,senha])
+    console.table([nick,email,senha])
 })
