@@ -28,5 +28,7 @@ body{
     background-color: #BFB9AE;
    margin: 0;
    padding: 10px 25px;
-   top-center
+   width: 60%;
+   list-style-type: none;
+   box-shadow: 5px 5px 30px;
 }
