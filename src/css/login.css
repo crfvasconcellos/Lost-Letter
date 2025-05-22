@@ -1,26 +1,147 @@
-*{
+/* Reset e padrões globais */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Remoção dos estilos padrão de listas */
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #476CFF;
+    height: auto;
+    max-height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    max-height: 120px;
+    width: auto;
+    height: auto;
 }
 
 
-html, body {
+header a {
+    margin-left: 70px;
+    display: flex;
+}
+
+/* Corpo da página */
+body {
+    background-color: #f3ece8;
     height: 100%;
-}
-
-
-header{
-    background-color: #BFB9AE;
-    height: 80px;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
 }
 
-header a{
-    margin-left: 70px ;
+/* Bloco de login */
+.login {
+    border-radius: 60px;
+    background-color: #F7B239;
+    padding: 40px 40px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    font-size: 36px;
+    background-size: cover;
+    min-width: 400px;     /* Largura mínima */
+    min-height: 400px;    /* Altura mínima */
+    box-shadow: 0 2px 16px #0002;
+    margin: 40px 0;
 }
 
-body{
-    background-color: #F2EEEB;
+/* Lista de dados (e-mail e senha) */
+.dados {
+    margin: 100px;
+    margin-right: 200px;
+}
+
+.dados li {
+    margin-bottom: 15px;
+}
+
+/* Campos de entrada */
+.login input {
+    background-color: #F3EEE8;
+    width: 685px;
+    height: 89px;
+    border-radius: 13px;
+    border: none;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+/* Botão */
+.login button {
+    width: 122px;
+    height: 56px;
+    margin-top: 15px;
+    margin-left: 85%;
+    
+    color: #FFF;
+    background-color: #F38B45;
+    border: none;
+    border-radius: 13px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0px #0002; /* Sombra suave */
+}
+
+.ancoras{
+    font-size: 20px;
+}
+
+.bodygeral {
+    display: flex;
+    flex-direction: column;   /* Empilha seta e login em coluna */
+    align-items: center;      /* Centraliza horizontalmente */
+    justify-content: center;  /* Centraliza verticalmente */
+}
+
+
+.alinhar-seta{
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+.seta-voltar img {   
+    -webkit-user-drag: none;   /* Chrome/Safari */
+    user-select: none;         /* Não permite seleção */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+footer {
+    /* Removido height: 100%; */
+    margin-top: auto;
+    background-color: #476CFF;
+    width: 100%;
+    padding: 70px 0; /* para dar altura visual, ao invés de height fixa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
