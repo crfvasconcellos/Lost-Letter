@@ -11,7 +11,7 @@ html, body {
 }
 
 header{
-     margin-top: auto;
+
     background-color: #476CFF;
     width: 100%;
     padding: 20px 0; /* para dar altura visual, ao invés de height fixa */
