@@ -12,7 +12,7 @@ btn.addEventListener("click", function(event) {
 
 localStorage.setItem("carro", "bmw")
 console.log(localStorage.getItem("carro"))
-localStorage.removeItem("carro")
+
 
 let usuario = ['nick', 'email', 'senha']
 localStorage.setItem("dados", usuario)
