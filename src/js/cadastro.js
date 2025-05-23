@@ -14,5 +14,5 @@ localStorage.setItem("carro", "bmw")
 console.log(localStorage.getItem("carro"))
 localStorage.removeItem("carro")
 
-let marcas = ['gibson', 'fender', 'ltd']
-localStorage.setItem("guitarras", marcas)
+let usuario = ['nick', 'email', 'senha']
+localStorage.setItem("dados", usuario)
