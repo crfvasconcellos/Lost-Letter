@@ -1,0 +1,45 @@
+ #teclado button {
+      margin: 3px;
+      width: 35px;
+      height: 35px;
+      font-weight: bold;
+      border-radius: 6px;
+      border: 1px solid #aaa;
+      background: #f7b239;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #teclado button:disabled {
+      background: #ccc;
+      color: #888;
+      cursor: not-allowed;
+    }
+    #novo-jogo {
+      margin-top: 20px;
+      padding: 10px 30px;
+      font-size: 1.2em;
+      background: #476cff;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 2px 2px 8px #0002;
+      display: none;
+    }
+    #mensagem {
+      min-height: 2em;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #d32f2f;
+      margin-top: 10px;
+    }
+    #palavra {
+      font-size: 2em;
+      letter-spacing: 0.5em;
+      margin: 20px 0;
+    }
+    #letras-chutadas {
+      margin: 10px 0;
+      color: #333;
+      font-size: 1.1em;
+    }
