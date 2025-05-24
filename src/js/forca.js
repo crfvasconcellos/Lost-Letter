@@ -3,7 +3,11 @@ const palavras = [
 ];
 
 const maxErros = 6;
-const letrasDisponiveis = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚÇÃÕÊÔ'.split('');
+const linhasTeclado = [
+  'QWERTYUIOP'.split(''),
+  'ASDFGHJKL'.split(''),
+  'ZXCVBNM'.split('')
+];
 
 let palavraSecreta = '';
 let chutes = [];
@@ -88,16 +92,23 @@ function chutarLetra(letra) {
 
 function criaTeclado() {
   teclado.innerHTML = '';
-  letrasDisponiveis.forEach(letra => {
-    const btn = document.createElement('button');
-    btn.textContent = letra;
-    btn.disabled = chutes.includes(letra) || fimDeJogo;
-    btn.addEventListener('click', () => {
-      chutarLetra(letra);
-      btn.disabled = true;
-      criaTeclado(); 
+  linhasTeclado.forEach(linha => {
+    const divLinha = document.createElement('div');
+    divLinha.style.display = 'flex';
+    divLinha.style.justifyContent = 'center';
+    divLinha.style.marginBottom = '5px';
+    linha.forEach(letra => {
+      const btn = document.createElement('button');
+      btn.textContent = letra;
+      btn.disabled = chutes.includes(letra) || fimDeJogo;
+      btn.addEventListener('click', () => {
+        chutarLetra(letra);
+        btn.disabled = true;
+        criaTeclado();
+      });
+      divLinha.appendChild(btn);
     });
-    teclado.appendChild(btn);
+    teclado.appendChild(divLinha);
   });
 }
 
