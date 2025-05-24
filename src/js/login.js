@@ -1,21 +1,20 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o recarregamento da página
 
-    const emailDigitado = document.getElementById("email").value;
-    const senhaDigitada = document.getElementById("senha").value;
+    const emailDigitado = document.getElementById('email').value;
+    const senhaDigitada = document.getElementById('senha').value;
 
-    // Pegando os dados armazenados no Local Storage
-    const usuarioSalvo = JSON.parse(localStorage.getItem("usuario"));
+    // Recupera o usuário salvo no localStorage (ajuste conforme seu cadastro)
+    const usuarioSalvo = JSON.parse(localStorage.getItem('usuario'));
 
-    if (!usuarioSalvo) {
-        alert("Usuário não cadastrado!");
-        return;
-    }
-
-    if (usuarioSalvo.email === emailDigitado && usuarioSalvo.senha === senhaDigitada) {
+    if (
+        usuarioSalvo &&
+        usuarioSalvo.email === emailDigitado &&
+        usuarioSalvo.senha === senhaDigitada
+    ) {
         alert("Login realizado com sucesso!");
-        localStorage.setItem("logado", "true"); // Marcamos que o usuário está logado
-        window.location.href = "perfil.html"; // Redireciona para a página protegida
+        localStorage.setItem("logado", "true");
+        window.location.href = "forca.html"; // Redireciona para o jogo da forca
     } else {
         alert("Email ou senha incorretos.");
     }
