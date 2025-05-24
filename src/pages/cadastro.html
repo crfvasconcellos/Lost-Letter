@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/cadastro.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hind+Madurai:wght@300;400;500;600;700&family=Oswald:wght@200..700&family=Poetsen+One&display=swap" rel="stylesheet">
-    <title>Lost-Letter cadastro</title>
+    <title>Lost-Letter Cadastro</title>
 </head>
 <body>
     <header>
         <a href="index.html">
-            <img src="/assets/Logo/Lost-Letter Logo PNG.png" alt="Logo Lost-Letter clicável, que direciona para o home">
+            <img src="/assets/Logo/Lost-Letter Logo PNG.png" alt="Logo Lost-Letter clicável">
         </a>  
     </header>
 
-
-
-   <section class="alinhar-seta">
+    <section class="alinhar-seta">
         <div class="seta-voltar">
             <a href="login.html">
                 <img src="../../assets/seta.png" alt="Seta de voltar">
@@ -26,24 +21,31 @@
         </div>
         <div class="bodygeral">
             <div class="cadastro">
-                <ul class="dados">
-                    <li><h3>Nick</h3>
-                    <input type="text">
-                    </li>
-                    <li><h3>E-mail</h3>
-                    <input type="email">
-                    </li>
-                    <li><h3>Senha</h3>
-                    <input type="password">
-                    </li>
-                </ul>
-                <button class="avançar">Avançar</button>
+                <form id="cadastroForm">
+                    <ul>
+                        <li>
+                            <h3>Nick</h3>
+                            <input type="text" id="nick" required>
+                        </li>
+                        <li>
+                            <h3>E-mail</h3>
+                            <input type="email" id="email" required>
+                        </li>
+                        <li>
+                            <h3>Senha</h3>
+                            <input type="password" id="senha" required>
+                        </li>
+                    </ul>
+                    <button type="submit" class="avançar">Cadastrar</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <footer> 
-        <p>© 2025 Lost-Letter. Todos os direitos reservados.</p> 
+    <footer>  
+        <p>© 2025 Lost-Letter. Todos os direitos reservados.</p>  
     </footer>
+
+    <script src="/src/js/cadastro.js"></script>
 </body>
 </html>
