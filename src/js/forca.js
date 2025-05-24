@@ -1,3 +1,9 @@
+// Verificar se o usuário está logado antes de carregar o jogo
+if (localStorage.getItem("logado") !== "true") {
+    alert("Você precisa estar logado para jogar!");
+    window.location.href = "login.html"; // Redireciona para a tela de login
+}
+
 const palavras = [
   "ABACAXI", "ELEFANTE", "COMPUTADOR", "GIRAFA", "CHOCOLATE", "CORAÇÃO", "AÇÃO", "PÃO", "LIMÃO", "CAMINHÃO"
 ];
