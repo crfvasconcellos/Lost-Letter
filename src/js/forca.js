@@ -5,7 +5,7 @@ if (localStorage.getItem("logado") !== "true") {
 }
 
 const palavras = [
-  "ABACAXI", "ELEFANTE", "COMPUTADOR", "GIRAFA", "CHOCOLATE", "CORAÇÃO", "AÇÃO", "PÃO", "LIMÃO", "CAMINHÃO"
+  "ABACAXI", "ELEFANTE", "COMPUTADOR", "GIRAFA", "CHOCOLATE"
 ];
 
 const maxErros = 6;
