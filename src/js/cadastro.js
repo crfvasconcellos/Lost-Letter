@@ -13,6 +13,15 @@ document.getElementById("cadastroForm").addEventListener("submit", function(even
 
     alert("Cadastro realizado com sucesso!");
 
+    fetch('http://localhost:3000/usuarios', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ nick, email, senha, pontos: 0, imagem: 1 })
+})
+.then(res => res.text())
+.then(alert)
+.catch(console.error);
+
     // Redireciona para login
     window.location.href = "login.html";
 });
