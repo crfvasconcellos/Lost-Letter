@@ -1,5 +1,4 @@
-document.getElementById("cadastroForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita recarregar a página ao enviar o formulário
+const btn = document.querySelector('.avançar')
 
     const nick = document.getElementById("nick").value;
     const email = document.getElementById("email").value;
@@ -8,11 +7,12 @@ document.getElementById("cadastroForm").addEventListener("submit", function(even
     // Criando um objeto de usuário
     const usuario = { nick, email, senha };
 
-    // Salvando no Local Storage
-    localStorage.setItem("usuario", JSON.stringify(usuario));
+    console.table([nick,email,senha])
+})
 
-    alert("Cadastro realizado com sucesso!");
+localStorage.setItem("carro", "bmw")
+console.log(localStorage.getItem("carro"))
+localStorage.removeItem("carro")
 
-    // Redireciona para login
-    window.location.href = "login.html";
-});
+let marcas = ['gibson', 'fender', 'ltd']
+localStorage.setItem("guitarras", marcas)
