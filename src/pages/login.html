@@ -19,22 +19,28 @@
                 <img src="../../assets/seta.png" alt="Seta de voltar">
             </a>
         </div>
+
         <div class="bodygeral">
             <div class="login">
                 <form id="loginForm">
-                    <ul class="dados">
-                        <li><h3>E-mail</h3>
-                            <input type="email" id="email" required>
-                        </li>
-                        <li><h3>Senha</h3>
-                            <input type="password" id="senha" required>
-                        </li>
-                        <div class="ancoras">
-                            <li><a href="">Esqueceu a senha?</a></li>
-                            <li><a href="cadastro.html">Não possui Cadastro?</a></li>
-                        </div>
-                    </ul>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" required>
+                    </div>
+
+                    <div class="ancoras">
+                        <a href="#">Esqueceu a senha?</a>
+                        <a href="cadastro.html">Não possui Cadastro?</a>
+                    </div>
+
                     <button type="submit" class="avançar">Avançar</button>
+
                 </form>
             </div>
         </div>
