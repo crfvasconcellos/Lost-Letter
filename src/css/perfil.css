@@ -60,26 +60,27 @@ header a {
     height: 420px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #F7B239; /* Exemplo: borda azul de 6px */
+    border: 6px solid #191970; /* Exemplo: borda azul de 6px */
     box-shadow: 0px 12px 0px rgba(0, 0, 0, 0.133); /* Sombra suave */
-
      /* Impede arrastar e copiar */
     -webkit-user-drag: none;   /* Chrome/Safari */
     user-select: none;         /* Não permite seleção */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    background-color: #1e90ff;
 }
 
-.fotoperfil h2{
-    background-color: #F38B45;
+.fotoperfil h2{   /*NICKNAME*/
+    background-color: #151922;
     border-radius: 13px;
     padding: 10px;
+    color: #c7d7dc;
 }
 
 
 .Rank{
-    background-color: #F38B45;
+    background-color: #191970;
     width: 400px;
     /* min-height: 200px;  Remova ou comente esta linha */
     border-radius: 16px;
