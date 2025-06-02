@@ -16,16 +16,15 @@ ul, ol {
 
 /* Cabeçalho */
 header {
-    background-color: #476CFF;
-    height: auto;
-    max-height: 120px;
+    background-color: #191970;
     width: 100%;
     display: flex;
     align-items: center;
+    margin-bottom: auto;
 }
 
 header img {
-    max-height: 120px;
+    max-height: 80px;
     width: auto;
     height: auto;
 }
@@ -44,28 +43,25 @@ header a {
 
 /* Corpo da página */
 body {
-    background-color: #f3ece8;
-    height: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-/* Bloco de login */
-.cadastro {
-    border-radius: 60px;
-    background-color: #F7B239;
-    padding: 40px 40px;
+    background-color: #87ceeb;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    color: #000;
-    font-size: 36px;
-    background-size: cover;
-    min-width: 400px;     /* Largura mínima */
-    min-height: 400px;    /* Altura mínima */
-    box-shadow: 0 2px 16px #0002;
-    margin: 40px 0;
+    min-height: 100vh;
+}
+/* Bloco de login */
+.cadastro {
+    border-radius: 20px;
+    background-color: #9ac6e3;
+    padding: 30px 50px; 
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    font-size: 26px;
+    width: 100%;
+    max-width: 700px; 
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    margin: 0px 0;
 }
 
 /* Lista de dados (e-mail e senha) */
@@ -81,8 +77,8 @@ body {
 /* Campos de entrada */
 .cadastro input {
     background-color: #F3EEE8;
-    width: 685px;
-    height: 89px;
+    width: 550px;
+    height: 60px;
     border-radius: 13px;
     border: none;
     padding: 0 10px;
@@ -95,7 +91,6 @@ body {
     height: 56px;
     margin-top: 15px;
     margin-left: 85%;
-    
     color: #FFF;
     background-color: #F38B45;
     border: none;
@@ -110,38 +105,37 @@ body {
 }
 
 .bodygeral {
-      display: flex;
-    flex-direction: column;   /* Empilha seta e login em coluna */
-    align-items: center;      /* Centraliza horizontalmente */
-    justify-content: center;  /* Centraliza verticalmente */
+    display: flex;
+    flex-direction: column;   
+    align-items: center;        
 
 }
 
 .alinhar-seta{
-    margin: 100px;
+    
     display: flex;
     justify-content: center;
-    margin-right: 100px;
+    
 }
 
 .seta-voltar img {   
-    -webkit-user-drag: none;   /* Chrome/Safari */
-    user-select: none;         /* Não permite seleção */
+    -webkit-user-drag: none;
+    user-select: none;       
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    width: 40px;
+    width: 30px;
     height: auto;
     cursor: pointer;
 }
 
 footer {
-    /* Removido height: 100%; */
-    margin-top: auto;
-    background-color: #476CFF;
+    background-color: #191970;
     width: 100%;
-    padding: 70px 0; /* para dar altura visual, ao invés de height fixa */
+    padding: 3vh 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #add8e6;
+    margin-top: auto;
 }
