@@ -7,11 +7,11 @@
 
 
 body {
-    background-color: #f3ece8;
-    height: 100%;
-    min-height: 100vh;
+    background-color: #87ceeb;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
 
@@ -27,16 +27,14 @@ body {
 }
 
 header {
-    background-color: #476CFF;
-    height: auto;
-    max-height: 120px;
+    background-color: #191970;
     width: 100%;
     display: flex;
     align-items: center;
 }
 
 header img {
-    max-height: 120px;
+    max-height: 80px;
     width: auto;
     height: auto;
 }
@@ -95,11 +93,12 @@ header a {
 
 
 footer {
-      margin-top: auto;
-    background-color: #476CFF;
+    background-color: #191970;
     width: 100%;
-    padding: 10px 0; /* para dar altura visual, ao invés de height fixa */
+    padding: 3vh 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #add8e6;
+    margin-top: auto;
 }
