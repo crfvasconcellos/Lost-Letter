@@ -67,14 +67,16 @@ function verificaFimDeJogo() {
     mensagem.textContent = `Você perdeu! A palavra era: ${palavraSecreta}`;
     fimDeJogo = true;
     desabilitaTeclado();
-    btnNovoJogo.style.display = 'inline-block';
+    btnNovoJogo.style.display = 'block';
     return true;
   }
   if (palavraSecreta.split('').every(letra => chutes.includes(letra))) {
     mensagem.textContent = 'Parabéns! Você ganhou!';
     fimDeJogo = true;
     desabilitaTeclado();
-    btnNovoJogo.style.display = 'inline-block';
+    btnNovoJogo.style.display = 'block';
+    pontuacao += 100; // Exemplo: 100 pontos por vitória
+    atualizaPontuacao();
     return true;
   }
   return false;
@@ -130,7 +132,27 @@ function desabilitaTeclado() {
   botoes.forEach(btn => btn.disabled = true);
 }
 
+let pontuacao = 0;
+
 function iniciaJogo() {
+  const email = localStorage.getItem("usuarioEmail");
+  if (email) {
+    fetch("http://localhost:3000/usuarios")
+      .then(res => res.json())
+      .then(usuarios => {
+        const usuario = usuarios.find(u => u.email === email);
+        if (usuario) {
+          pontuacao = Number(usuario.pontos) || 0;
+          atualizaPontuacao();
+        }
+        iniciarRodada();
+      });
+  } else {
+    iniciarRodada();
+  }
+}
+
+function iniciarRodada() {
   escolhePalavra();
   chutes = [];
   erros = 0;
@@ -143,6 +165,35 @@ function iniciaJogo() {
   criaTeclado();
 }
 
-btnNovoJogo.addEventListener('click', iniciaJogo);
+function atualizaPontuacao() {
+  let el = document.getElementById('pontuacao-forca');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'pontuacao-forca';
+    el.style = "font-size:1.3em;color:#1e90ff;margin:10px 0;text-align:center;";
+    mensagem.parentNode.insertBefore(el, mensagem);
+  }
+  el.textContent = `Pontuação: ${pontuacao}`;
+}
+
+
 
 iniciaJogo();
+
+function salvaPontuacaoUsuario() {
+  const email = localStorage.getItem("usuarioEmail");
+  if (!email) return;
+  fetch("http://localhost:3000/usuarios", {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      email: email,
+      pontos: 100 // sempre 100 por vitória
+    })
+  });
+}
+
+btnNovoJogo.addEventListener('click', function() {
+  salvaPontuacaoUsuario(); // Salva só quando clicar!
+  iniciarRodada();
+});

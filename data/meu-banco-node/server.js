@@ -29,3 +29,29 @@ app.get('/usuarios', (req, res) => {
 });
 
 app.listen(3000, () => console.log('Servidor rodando em http://localhost:3000'));
+
+// Atualiza pontos ou imagem do usuário
+app.put('/usuarios', (req, res) => {
+    const { email, pontos, imagem } = req.body;
+    fs.readFile('usuarios.txt', 'utf8', (err, data) => {
+        if (err) return res.status(500).send('Erro ao ler usuários');
+        let linhas = data.trim().split('\n');
+        let alterado = false;
+        linhas = linhas.map(linha => {
+            const campos = linha.split(';');
+           if (campos[1] === email) {
+    if (typeof pontos !== "undefined") {
+        campos[3] = String(Number(campos[3]) + Number(pontos)); // Soma os pontos recebidos
+    }
+    if (typeof imagem !== "undefined") campos[4] = imagem;
+    alterado = true;
+}
+            return campos.join(';');
+        });
+        if (!alterado) return res.status(404).send('Usuário não encontrado');
+        fs.writeFile('usuarios.txt', linhas.join('\n') + '\n', err => {
+            if (err) return res.status(500).send('Erro ao salvar');
+            res.send('Usuário atualizado com sucesso!');
+        });
+    });
+});
