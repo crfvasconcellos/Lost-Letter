@@ -128,7 +128,7 @@ window.addEventListener("DOMContentLoaded", function() {
     const email = localStorage.getItem("usuarioEmail");
     const nicknameEl = document.getElementById("nickname");
     const pontuacaoEl = document.getElementById("pontuacao");
-    // ...restante do código...
+    
 
     fetch("http://localhost:3000/usuarios")
         .then(res => res.json())
@@ -138,9 +138,9 @@ window.addEventListener("DOMContentLoaded", function() {
             if (usuario && pontuacaoEl) {
                 pontuacaoEl.textContent = `Pontos: ${usuario.pontos}`;
             }
-            // ...restante do código...
+            
         })
-        // ...restante do código...
+        
 });
 
 window.addEventListener("DOMContentLoaded", function() {
