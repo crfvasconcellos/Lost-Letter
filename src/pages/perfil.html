@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <title>Perfil</title>
+</head>
+<body>
+    
+    <header>
+            <a href="index.html">
+                <img src="/assets/Logo/Lost-Letter Logo PNG.png" alt="Logo Lost-Letter clicável, que direciona para o home">
+            </a>  
+        </header>   
+
+    <section class="principal">
+        
+
+
+      <div class="fotoperfil">
+    <div style="position: relative; display: flex; align-items: center;">
+        <img id="avatar-img" src="https://vitalprev.com.br/wp-content/uploads/2022/05/road-sign-361514_960_720.png" alt="">
+        <img id="editar-avatar" src="../../assets/pngtree-cartoon-artist-brush-png-image_9008325.png" alt="Editar avatar" title="Editar avatar" style="width:38px; height:38px; cursor:pointer; position:absolute; right:10px; bottom:10px; background:#fff; border-radius:50%; box-shadow:0 2px 8px #0002;">
+    </div>
+    <h2 id="nickname">NICKNAME</h2>
+    <!-- Modal de seleção de avatar -->
+    <div id="avatar-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#0008; align-items:center; justify-content:center; z-index:1000;">
+        <div style="background:#fff; padding:32px 24px; border-radius:18px; box-shadow:0 8px 32px #0004; display:flex; flex-direction:column; align-items:center;">
+            <h3 style="color:#191970; margin-bottom:18px;">Escolha seu avatar</h3>
+            <div id="avatar-selector" style="display:flex; gap:18px; margin-bottom:18px;">
+                <img src="../../assets/Logo zumbi.png" data-avatar="1" style="width:80px; height:80px; border-radius:50%; cursor:pointer; border:3px solid transparent;">
+                <img src="../../assets/Bloco Triste.png" data-avatar="2" style="width:80px; height:80px; border-radius:50%; cursor:pointer; border:3px solid transparent;">
+                <img src="../../assets/Esqueleto.png" data-avatar="3" style="width:80px; height:80px; border-radius:50%; cursor:pointer; border:3px solid transparent;">
+                <img src="../../assets/Robo.png" data-avatar="4" style="width:80px; height:80px; border-radius:50%; cursor:pointer; border:3px solid transparent;">
+            </div>
+            <button id="salvar-avatar" style="padding:8px 32px; border-radius:8px; background:#1e90ff; color:#fff; border:none; font-size:1.1em; cursor:pointer;">Salvar</button>
+            <button id="fechar-modal" style="margin-top:10px; background:none; border:none; color:#191970; cursor:pointer;">Cancelar</button>
+        </div>
+    </div>
+</div>
+        <section class="Rank"> 
+
+            <div class="rank-img-placeholder" id="rank-img-placeholder">
+
+
+        </div>
+
+            <p id="pontuacao" style="font-size:1.3em; color:#1e90ff; margin: 10px 0 0 0;">Pontos: 0</p>
+        </section>
+
+</section>
+
+     <footer> 
+        <p>© 2025 Lost-Letter. Todos os direitos reservados.</p> 
+    </footer>
+
+<script src="../js/perfil.js"></script>
+</body>
+</html>

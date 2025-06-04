@@ -1,0 +1,180 @@
+/* Reset e padrões globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+body {
+    background-color: #87ceeb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #191970;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinha logo à esquerda e perfil à direita */
+    padding: 0 24px;
+}
+
+header img {
+    max-height: 80px;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: transform 0.2s cubic-bezier(.4,0,.2,1), filter 0.2s;
+}
+header img:hover {
+    transform: scale(1.08) rotate(-3deg);
+    filter: drop-shadow(0 4px 16px #1e90ff88);
+}
+
+header a {
+    margin-left: 0;
+    display: flex;
+}
+    
+header .perfil-link {
+    margin-left: 0;
+}
+
+.game {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 10px 0 10px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+#palavra {
+    font-size: 2em;
+    letter-spacing: 0.5em;
+    margin: 20px 0;
+    color: #191970;
+    font-weight: bold;
+    text-align: center;
+}
+
+#letras-chutadas {
+    margin: 10px 0;
+    color: #333;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#mensagem {
+    min-height: 2em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #d32f2f;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#teclado {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 20px 0 0 0;
+}
+
+/* Quadro da forca */
+
+#teclado button {
+    margin: 3px;
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1.5px solid #1e90ff;
+    background: #f7b239;
+    color: #191970;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.2s, color 0.2s, transform 0.15s cubic-bezier(.4,0,.2,1);
+}
+#teclado button:hover:not(:disabled) {
+    background: #1e90ff;
+    color: #fff;
+    transform: scale(1.08);
+}
+#teclado button:disabled {
+    background: #ccc;
+    color: #888;
+    cursor: not-allowed;
+    border-color: #aaa;
+}
+
+#novo-jogo {
+    margin-top: 24px;
+    padding: 12px 36px;
+    font-size: 1.2em;
+    background: #F38B45;
+    color: #fff;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.13);
+    align-self: flex-end;
+    transition: transform 0.15s cubic-bezier(.4,0,.2,1), background 0.2s, color 0.2s;
+    display: none;
+}
+#novo-jogo.show {
+    display: block;
+}
+#novo-jogo:hover, #novo-jogo:focus {
+    transform: scale(1.06);
+    background-color: #ffb36b;
+    color: #191970;
+}
+
+footer {
+    background-color: #191970;
+    width: 100%;
+    padding: 3vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #add8e6;
+    margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .game {
+        padding: 20px 2vw 0 2vw;
+        max-width: 98vw;
+    }
+    #palavra {
+        font-size: 1.3em;
+        letter-spacing: 0.2em;
+    }
+    #teclado button {
+        width: 28px;
+        height: 28px;
+        font-size: 1em;
+    }
+    #novo-jogo {
+        width: 100%;
+        align-self: stretch;
+        font-size: 1em;
+        padding: 10px 0;
+    }
+    header img {
+        max-height: 60px;
+    }
+    footer {
+        font-size: 0.95em;
+        padding: 16px 4px;
+    }
+}

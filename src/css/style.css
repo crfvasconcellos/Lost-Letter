@@ -1,19 +1,94 @@
-*{
+html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background-color: #87ceeb;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #191970;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-jogar {
+    flex: 1; /* ocupa o espaço restante */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Jogar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    margin-top: 0;
+}
+
+.Jogar img {
+    height: 50vh; /* 30% da altura da tela */
+    width: auto; /* Mantém proporção */
+    border: 4px solid #9ac6e3;
+    border-radius: 40px;
+    background-color: #add8e6;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.Jogar a {
+    font-size: 5vh;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #1e90ff;
+    padding: 3vh 8vh; 
+    box-shadow: 5px 5px 0px #0002;
+}
+
+footer {
+    background-color: #191970;
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #add8e6;
 }
 
 
-html, body {
-    height: 100%;
+.Jogar a {
+    /* ...código existente... */
+    animation: pulseJogar 1.6s infinite alternate;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
 }
 
-header{
-    background-color: #BFB9AE;
-    height: 80px;
+@keyframes pulseJogar {
+    0% {
+        box-shadow: 5px 5px 0px #0002, 0 0 0 #1e90ff;
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: 5px 5px 0px #0002, 0 0 24px #1e90ff88;
+        transform: scale(1.06);
+    }
 }
 
-body{
-    background-color: #F2EEEB;
+.Jogar a:hover {
+    background-color: #f7b239;
+    color: #191970;
+    transform: scale(1.08);
+    box-shadow: 0 0 32px #f7b239cc, 2px 2px 0 #1e90ff88;
 }

@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #f3ece8;
+}
+
+
+body {
+    background-color: #87ceeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header img {
+    max-height: 80px;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: transform 0.2s cubic-bezier(.4,0,.2,1), filter 0.2s;
+}
+
+#editar-avatar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px #0002;
+    padding: 4px;
+    z-index: 2;
+    transition: box-shadow 0.2s;
+}
+#editar-avatar:hover {
+    box-shadow: 0 4px 16px #1e90ff88;
+}
+
+
+
+header img:hover {
+    transform: scale(1.08) rotate(-3deg);
+    filter: drop-shadow(0 4px 16px #1e90ff88);
+}
+
+.principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Rank{
+    margin: 100px;
+    height: auto;
+}
+
+header {
+    background-color: #191970;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    max-height: 80px;
+    width: auto;
+    height: auto;
+}
+
+
+header a {
+    margin-left: 70px;
+    display: flex;
+}
+
+
+.fotoperfil{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    
+}
+
+.fotoperfil img {
+    margin: 40px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #191970; /* Exemplo: borda azul de 6px */
+    box-shadow: 0px 12px 0px rgba(0, 0, 0, 0.133); /* Sombra suave */
+     /* Impede arrastar e copiar */
+    -webkit-user-drag: none;   /* Chrome/Safari */
+    user-select: none;         /* Não permite seleção */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background-color: #1e90ff;
+}
+
+.fotoperfil h2{   /*NICKNAME*/
+    background-color: #151922;
+    border-radius: 13px;
+    padding: 10px;
+    color: #c7d7dc;
+}
+
+
+.Rank {
+    background-color: #191970;
+    width: 400px;
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.133);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+    gap: 18px; /* Espaço entre elementos internos */
+}
+
+.rank-img-placeholder {
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    box-shadow: none;
+    overflow: visible;
+    padding: 0;
+}
+
+.rank-img-placeholder img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: none;
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#pontuacao {
+    font-size: 2em;
+    color: #f7b239;
+    font-weight: bold;
+    margin: 18px 0 0 0;
+    background: #fff2;
+    padding: 14px 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #0002;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: background 0.2s, color 0.2s;
+    min-width: 180px;
+}
+
+/* Espaço reservado para imagem do rank */
+
+
+footer {
+    background-color: #191970;
+    width: 100%;
+    padding: 3vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #add8e6;
+    margin-top: auto;
+}
