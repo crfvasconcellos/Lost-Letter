@@ -1,6 +1,6 @@
 # 🎮 Lost Letter - Jogo da Forca
 
-Projeto desenvolvido por **[Cláudio Vasconcellos](https://github.com/crfvasconcellos)** e **[Otávio Augusto](https://github.com/otavio-asr)** durante a disciplina de **Desenvolvimento Web**, com o objetivo de aplicar conhecimentos de HTML, CSS e JavaScript em um projeto prático e interativo.
+Projeto desenvolvido por **[Cláudio Vasconcellos](https://github.com/crfvasconcellos)** e **[Otávio Augusto](https://github.com/otavio-asr)** Durante o **curso de introdução ao Desenvolvimento Web e Design de Interfaces** da **EPIC** , com o objetivo de aplicar conhecimentos de HTML, CSS e JavaScript em um projeto prático e interativo.
 
 ---
 
