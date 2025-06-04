@@ -75,6 +75,8 @@ function verificaFimDeJogo() {
     fimDeJogo = true;
     desabilitaTeclado();
     btnNovoJogo.style.display = 'inline-block';
+    // Adiciona pontos ao usuário logado
+    adicionarPontosAoUsuario(100); // Exemplo: 100 pontos por vitória
     return true;
   }
   return false;
@@ -141,6 +143,27 @@ function iniciaJogo() {
   atualizaPalavra();
   atualizaLetrasChutadas();
   criaTeclado();
+}
+
+function adicionarPontosAoUsuario(pontosGanhos) {
+  const email = localStorage.getItem('usuarioEmail');
+  if (!email) return;
+  fetch('http://localhost:3000/usuarios')
+    .then(res => res.json())
+    .then(usuarios => {
+      const usuario = usuarios.find(u => u.email === email);
+      if (!usuario) return;
+      const novosPontos = (usuario.pontos || 0) + pontosGanhos;
+      fetch('http://localhost:3000/usuarios/pontos', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, pontos: novosPontos })
+      })
+      .then(res => res.text())
+      .then(msg => {
+        // Pontos atualizados
+      });
+    });
 }
 
 btnNovoJogo.addEventListener('click', iniciaJogo);
