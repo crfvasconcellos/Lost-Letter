@@ -5,8 +5,15 @@ if (localStorage.getItem("logado") !== "true") {
 }
 
 const palavras = [
-  "ABACAXI", "ELEFANTE", "COMPUTADOR", "GIRAFA", "CHOCOLATE"
-];
+  "ABACAXI", "ELEFANTE", "COMPUTADOR", "GIRAFA", "CHOCOLATE",
+  "BANANA", "CACHORRO", "JANELA", "LIVRO", "MONTANHA",
+  "PIRATA", "QUADRO", "SAPATO", "TIGRE", "URSO",
+  "VIOLAO", "XADREZ", "ZEBRA", "BICICLETA", "CAMINHAO",
+  "DINOSSAURO", "ESCOLA", "FANTASMA", "GUITARRA", "HIPOPOTAMO",
+  "IGREJA", "JORNAL", "LAMPADA", "MACACO", "NAVIO",
+  "OCULOS", "PIPOCA", "QUEIJO", "RAPOSA", "SORVETE",
+  "TELEFONE", "UNICORNIO", "VASSOURA", "WIFI", "YOGA"
+];  
 
 const maxErros = 6;
 const linhasTeclado = [

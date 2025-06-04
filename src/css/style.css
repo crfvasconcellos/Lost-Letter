@@ -67,3 +67,28 @@ footer {
     justify-content: center;
     color: #add8e6;
 }
+
+
+.Jogar a {
+    /* ...código existente... */
+    animation: pulseJogar 1.6s infinite alternate;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+@keyframes pulseJogar {
+    0% {
+        box-shadow: 5px 5px 0px #0002, 0 0 0 #1e90ff;
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: 5px 5px 0px #0002, 0 0 24px #1e90ff88;
+        transform: scale(1.06);
+    }
+}
+
+.Jogar a:hover {
+    background-color: #f7b239;
+    color: #191970;
+    transform: scale(1.08);
+    box-shadow: 0 0 32px #f7b239cc, 2px 2px 0 #1e90ff88;
+}

@@ -19,6 +19,9 @@ header {
 
 header img {
     max-height: 80px;
+    user-select: none;         /* Não permite selecionar */
+    -webkit-user-drag: none;   /* Não permite arrastar (Safari/Chrome) */
+    transition: transform 0.2s cubic-bezier(.4,0,.2,1), filter 0.2s;
 }
 
 header a {
@@ -124,7 +127,10 @@ footer {
     font-weight: bold;
 }
 
-
+.login form {
+    display: flex;
+    flex-direction: column;
+}
 
 .avançar {
     width: 140px;
@@ -141,4 +147,44 @@ footer {
 }
 
 
+.destaque-cadastro {
+    background: none;
+    color: #1e90ff;
+    border: 1.5px solid #1e90ff;
+    border-radius: 8px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
 
+.destaque-cadastro:hover {
+    background: #1e90ff;
+    color: #fff;
+    border-color: #1e90ff;
+    text-decoration: none;
+}
+
+.avançar {
+    transition: transform 0.15s cubic-bezier(.4,0,.2,1), background 0.2s, color 0.2s;
+}
+
+.avançar:hover, .avançar:focus {
+    transform: scale(1.06);
+    background-color: #ffb36b;
+    color: #191970;
+}
+
+header img {
+    transition: transform 0.2s cubic-bezier(.4,0,.2,1), filter 0.2s;
+}
+
+header img:hover {
+    transform: scale(1.08) rotate(-3deg);
+    filter: drop-shadow(0 4px 16px #1e90ff88);
+}

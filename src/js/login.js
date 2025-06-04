@@ -12,10 +12,12 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
             if (usuario) {
                 alert("Login realizado com sucesso!");
+                localStorage.setItem("usuarioEmail", usuario.email); // Salva só o e-mail
                 localStorage.setItem("logado", "true");
-                localStorage.setItem("usuarioLogado", JSON.stringify(usuario)); // Salva dados do usuário logado
                 window.location.href = "forca.html";
-            } else {
+            }
+
+           else {
                 alert("Email ou senha incorretos ou usuário não cadastrado.");
             }
         })
