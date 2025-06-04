@@ -12,12 +12,8 @@ Projeto desenvolvido por **[Cláudio Vasconcellos](https://github.com/crfvasconc
 - Sistema de login e cadastro de usuários
 - Tela principal do jogo da forca
 - Sistema de pontuação individual e persistente
-- Ranking de jogadores com exibição de imagem de ranking conforme a pontuação
 - Perfil do usuário com avatar personalizável
 - Armazenamento dos dados dos usuários em arquivo `usuarios.txt` via backend Node.js
-- Palavras não se repetem durante a sessão de jogo
-- Pontuação é salva apenas ao clicar em "Novo Jogo" após acertar uma palavra
-
 ---
 
 ## 🧱 Tecnologias Utilizadas
