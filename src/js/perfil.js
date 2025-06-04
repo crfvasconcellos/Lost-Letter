@@ -158,12 +158,11 @@ window.addEventListener("DOMContentLoaded", function() {
                 pontuacaoEl.textContent = `Pontos: ${usuario.pontos}`;
                 // Determina o rank
                 let rank = "ferro-removebg-preview";
-                if (usuario.pontos >= 100) rank = "bronze";
                 if (usuario.pontos >= 500) rank = "prata-removebg-preview";
                 if (usuario.pontos >= 1000) rank = "ouro-removebg-preview";
                 if (usuario.pontos >= 2000) rank = "esmeralda-removebg-preview";
-                if (usuario.pontos >= 4000) rank = "diamante-removebg-preview";
-                if (usuario.pontos >= 7000) rank = "chelanger";
+                if (usuario.pontos >= 5000) rank = "diamante-removebg-preview";
+                if (usuario.pontos >= 10000) rank = "chelanger";
                 // Mostra a imagem do rank
                 rankImgPlaceholder.innerHTML = `<img src="../../assets/Ranks/no_background/${rank}.png" alt="${rank}" style="width:400px; height:400px; border-radius:50%; object-fit:cover;">`;
                 // Opcional: muda o background do rank

@@ -75,13 +75,13 @@ function verificaFimDeJogo() {
     fimDeJogo = true;
     desabilitaTeclado();
     btnNovoJogo.style.display = 'block';
-    pontuacao += 100; // Exemplo: 100 pontos por vitória
+    pontuacao += 100; // Soma pontos na hora
     atualizaPontuacao();
+    salvaPontuacaoUsuario(); // Salva pontos imediatamente ao ganhar
     return true;
   }
   return false;
 }
-
 function chutarLetra(letra) {
   if (fimDeJogo) return;
   letra = letra.toUpperCase();
@@ -175,7 +175,7 @@ function atualizaPontuacao() {
   }
   el.textContent = `Pontuação: ${pontuacao}`;
 }
-
+  
 
 
 iniciaJogo();
@@ -194,6 +194,5 @@ function salvaPontuacaoUsuario() {
 }
 
 btnNovoJogo.addEventListener('click', function() {
-  salvaPontuacaoUsuario(); // Salva só quando clicar!
   iniciarRodada();
 });
