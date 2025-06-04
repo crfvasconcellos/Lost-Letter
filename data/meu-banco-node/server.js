@@ -28,4 +28,27 @@ app.get('/usuarios', (req, res) => {
     });
 });
 
+// Rota para atualizar pontos do usuário
+app.put('/usuarios/pontos', (req, res) => {
+    const { email, pontos } = req.body;
+    fs.readFile('usuarios.txt', 'utf8', (err, data) => {
+        if (err) return res.status(500).send('Erro ao ler usuários');
+        let linhas = data.trim().split('\n');
+        let encontrou = false;
+        linhas = linhas.map(linha => {
+            const partes = linha.split(';');
+            if (partes[1] === email) {
+                encontrou = true;
+                partes[3] = String(pontos); // Atualiza pontos
+            }
+            return partes.join(';');
+        });
+        if (!encontrou) return res.status(404).send('Usuário não encontrado');
+        fs.writeFile('usuarios.txt', linhas.join('\n') + '\n', err2 => {
+            if (err2) return res.status(500).send('Erro ao salvar pontos');
+            res.send('Pontos atualizados com sucesso!');
+        });
+    });
+});
+
 app.listen(3000, () => console.log('Servidor rodando em http://localhost:3000'));
