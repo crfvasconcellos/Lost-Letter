@@ -101,7 +101,7 @@ Lost-Letter/
 
 - **Cadastro e Login:** Usuários podem se cadastrar e fazer login. Dados são salvos em `usuarios.txt`.
 - **Jogo da Forca:** Palavras aleatórias, sem repetição na sessão. Teclado virtual e contagem de erros.
-- **Pontuação:** Cada palavra acertada soma pontos. Pontuação é salva no backend ao clicar em "Novo Jogo".
+- **Pontuação:** Cada palavra acertada soma pontos que são salvos no beckend.
 - **Ranking:** Exibe o ranking do usuário com imagem correspondente ao nível de pontos.
 - **Perfil:** Usuário pode escolher e salvar seu avatar.
 - **Persistência:** Todos os dados são persistidos em `usuarios.txt` via backend Node.js.
